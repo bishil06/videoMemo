@@ -1,0 +1,30 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+.App {
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.videoContainer {
+  border: 1px solid gray;
+  width: 100%;
+  height: 100vh;
+}
+
+.videoPlayerContainer {
+  border: 1px solid red;
+}
+
+.videoMemoListContainer {
+  border: 1px solid blue;
+}
+
+.memoCard {
+  border: 1px solid aqua;
+}
