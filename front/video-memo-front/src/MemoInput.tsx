@@ -12,7 +12,7 @@ export default function MemoInput({ pushMemoList, memoList, getCurrentTime }: { 
   const btnClick = () => {
     if (textAreaRef.current) {
       const text = textAreaRef.current.value
-      console.log(text)
+
       try {
         const obj = JSON.parse(text)
         pushMemoList(obj)
