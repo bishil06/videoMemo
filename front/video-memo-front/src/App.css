@@ -30,6 +30,7 @@
 
 .memoCard {
   border: 1px solid aqua;
+  overflow-x: scroll;
 }
 
 .seekBtn {
