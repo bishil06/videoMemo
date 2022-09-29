@@ -53,7 +53,7 @@ async function main() {
     Object.assign(doc, req.body)
 
     collection.insertOne(doc)
-      .then(() => res.end('good'))
+      .then((r) => res.end(r))
       .catch(() => res.end('bad'))
   })
   app.listen(PORT, () => {
