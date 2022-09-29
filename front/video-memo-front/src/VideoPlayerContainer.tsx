@@ -1,10 +1,12 @@
 import { useRef, Dispatch, SetStateAction, RefObject, useEffect } from 'react'
 import ReactPlayer from 'react-player'
+import MemoInput from './MemoInput'
 
-export default function VideoPlayerContainer({ videoPath, width, setPlayerRef }: { videoPath: string, width: number, setPlayerRef: Dispatch<SetStateAction<RefObject<ReactPlayer>|null>>}) {
+export default function VideoPlayerContainer({ videoPath, width, setPlayerRef, pushMemoList, memoList }: { memoList: Array<{ [k: string]: string | number }>, videoPath: string, width: number, setPlayerRef: Dispatch<SetStateAction<RefObject<ReactPlayer>|null>>, pushMemoList: (obj: { [k: string]: string | number })=>void }) {
   const reactPlayerRef = useRef<ReactPlayer>(null)
   
   const containerRef = useRef<HTMLDivElement>(null) 
+  const getCurrentTime = () => reactPlayerRef.current?.getCurrentTime()
 
   useEffect(() => {
     setPlayerRef(reactPlayerRef)
@@ -20,6 +22,7 @@ export default function VideoPlayerContainer({ videoPath, width, setPlayerRef }:
         config={{ file: { attributes: { crossOrigin: 'anonymous' }}}} 
         >  
       </ReactPlayer>
+      <MemoInput pushMemoList={pushMemoList} memoList={memoList} getCurrentTime={getCurrentTime}></MemoInput>
     </div>
   )
 }

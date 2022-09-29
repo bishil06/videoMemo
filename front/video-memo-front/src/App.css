@@ -8,7 +8,8 @@
   border: 1px solid black;
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .videoContainer {
@@ -18,6 +19,8 @@
 }
 
 .videoPlayerContainer {
+  display: flex;
+  flex-direction: column;
   border: 1px solid red;
 }
 
@@ -27,4 +30,21 @@
 
 .memoCard {
   border: 1px solid aqua;
+}
+
+.seekBtn {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.memoInput {
+  overflow: scroll;
+  flex-grow: 1;
+  border: 1px solid green;
+  width: 100%;
+  height: 600px;
+}
+
+.actvieBtn {
+  background-color: greenyellow;
 }
