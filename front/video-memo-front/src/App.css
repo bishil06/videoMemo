@@ -12,8 +12,12 @@
   padding-right: 10px;
 }
 
+.videoPathInputContainer {
+  padding-bottom: 10px;
+}
+
 .videoContainer {
-  border: 1px solid gray;
+  border: 1px solid black;
   width: 100%;
   height: 100vh;
 }
@@ -21,15 +25,15 @@
 .videoPlayerContainer {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
+  border-bottom: 1px solid black;
 }
 
 .videoMemoListContainer {
-  border: 1px solid blue;
+  border-left: 1px solid black;
 }
 
 .memoCard {
-  border: 1px solid aqua;
+  border-bottom: 1px solid black;
   overflow-x: scroll;
 }
 
@@ -38,14 +42,17 @@
   padding-bottom: 0px;
 }
 
+.reactPlayer {
+  border-bottom: 1px solid black;
+}
+
 .memoInput {
   overflow: scroll;
   flex-grow: 1;
-  border: 1px solid green;
   width: 100%;
   height: 600px;
 }
 
 .actvieBtn {
-  background-color: greenyellow;
+  background-color: black;
 }
