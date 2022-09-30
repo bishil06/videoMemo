@@ -59,7 +59,7 @@ async function main() {
       })
       .catch((err) => {
         console.error(err)
-        res.status(500).end('bad')
+        res.status(400).end('bad')
       })
   })
 
@@ -77,7 +77,7 @@ async function main() {
       })
       .catch(err => {
         console.error(err)
-        res.status(500).end('bad')
+        res.status(400).end('bad')
       }) 
   })
 
