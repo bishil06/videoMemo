@@ -36,6 +36,7 @@ async function main() {
   // connect db
   const mongoClient = new MongoClient(dbURL)
   await mongoClient.connect()
+    .then(() => console.log('db connect success'))
     .catch(err => {
       console.error(err)
       mongoClient.close()
@@ -53,8 +54,13 @@ async function main() {
     Object.assign(doc, req.body)
 
     collection.insertOne(doc)
-      .then((r) => res.end(r))
-      .catch(() => res.end('bad'))
+      .then((r) => {
+        res.json({ objectId: r.insertedId.toJSON() })
+      })
+      .catch((err) => {
+        console.error(err)
+        res.end('bad')
+      })
   })
   app.listen(PORT, () => {
     console.log(`server listenning ${PORT}`)
@@ -62,5 +68,3 @@ async function main() {
 }
 
 main()
-
-
