@@ -37,6 +37,7 @@ h1 {
 
 .videoMemoListContainer {
   border-left: 1px solid black;
+  background-color: #d1b48c;
 }
 
 .memoCard {
