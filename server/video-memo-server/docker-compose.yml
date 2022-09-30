@@ -1,0 +1,25 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo:4.4
+    container_name: mongodb
+    restart: always
+    volumes:
+      - ./mongodb:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongodbname
+      - MONGO_INITDB_ROOT_PASSWORD=mongodbpass
+      - MONGO_INITDB_DATABASE=test
+  video-memo-server:
+    build: .
+    environment:
+      - MONGO_ID=mongodbname
+      - MONGO_PASSWD=mongodbpass
+      - MONGO_URL=mongodb
+      - MONGO_PORT=27017
+      - DB_NAME=test
+      - COLLECTION_NAME=testcollection
+    ports:
+      - 8080:8080
+    depends_on:
+      - mongodb
