@@ -62,7 +62,7 @@ function App() {
       <div className='inputContainer'>
         <VideoPathInputContainer setVideoPath={setVideoPath} videoPath={videoPath}></VideoPathInputContainer>
       </div>
-      <VideoContainer memoList={memoList} pushMemoList={pushMemoList} appSize={appSize} videoPath={videoPath}></VideoContainer>
+      <VideoContainer memoList={memoList} pushMemoList={pushMemoList} deleteMemo={deleteMemo} appSize={appSize} videoPath={videoPath}></VideoContainer>
     </div>
   );
 }
