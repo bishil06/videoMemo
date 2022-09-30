@@ -10,6 +10,10 @@ function App() {
   const [memoList, setMemoList] = useState<{ [k: string]: string | number }[]>([])
 
   const pushMemoList = (obj: { [k: string]: string | number }) => {
+    if (obj['url'] === undefined) {
+      obj['url'] = videoPath
+    }
+
     fetch('/card', {
       method: 'POST',
       headers: {
