@@ -59,9 +59,28 @@ async function main() {
       })
       .catch((err) => {
         console.error(err)
-        res.end('bad')
+        res.status(500).end('bad')
       })
   })
+
+  app.get('/cards', (req, res) => {
+    const url = req.query.url
+    console.log(url)
+
+    if (url === undefined) {
+      res.json([])
+    }
+
+    collection.find({ url }).toArray()
+      .then(arr => {
+        res.json(arr)
+      })
+      .catch(err => {
+        console.error(err)
+        res.status(500).end('bad')
+      }) 
+  })
+
   app.listen(PORT, () => {
     console.log(`server listenning ${PORT}`)
   })
