@@ -65,10 +65,10 @@ async function main() {
 
   app.get('/cards', (req, res) => {
     const url = req.query.url
-    console.log(url)
+    console.log('url', url)
 
     if (url === undefined) {
-      res.json([])
+      return res.json([])
     }
 
     collection.find({ url }).toArray()
