@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import './App.css';
 import VideoPathInputContainer from './VideoPathInputContainer';
 import VideoContainer from './VideoContainer'
+import LoadMemoListContainer from './LoadMemoListContainer';
 
 function App() {
   const appRef = useRef<HTMLDivElement>(null) 
@@ -43,6 +44,22 @@ function App() {
     })
   }
 
+  const loadMemoList = () => {
+    console.log('fetch cards ', videoPath)
+    fetch(`/cards?url=${videoPath}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => response.json())
+    .then(arr => {
+      if (arr instanceof Array) {
+        setMemoList(arr)
+      }
+    })
+  }
+
   const deleteMemo = (obj: { [k: string]: string | number }) => {
     const newList = memoList.filter(memo => obj !== memo)
     setMemoList(newList)
@@ -65,6 +82,7 @@ function App() {
       <h1>Video Memo</h1>
       <div className='inputContainer'>
         <VideoPathInputContainer setVideoPath={setVideoPath} videoPath={videoPath}></VideoPathInputContainer>
+        <LoadMemoListContainer loadMemoList={loadMemoList}></LoadMemoListContainer>
       </div>
       <VideoContainer memoList={memoList} pushMemoList={pushMemoList} deleteMemo={deleteMemo} appSize={appSize} videoPath={videoPath}></VideoContainer>
     </div>
