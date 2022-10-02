@@ -18,6 +18,10 @@ h1 {
   color: whitesmoke;
 }
 
+.inputContainer {
+  padding-bottom: 10px;
+}
+
 .videoPathInputContainer {
   padding-bottom: 10px;
 }
@@ -37,6 +41,7 @@ h1 {
 
 .videoMemoListContainer {
   border-left: 1px solid black;
+  background-color: #d1b48c;
 }
 
 .memoCard {
@@ -65,4 +70,8 @@ h1 {
 
 .actvieBtn {
   background-color: black;
+}
+
+.delteMemoBtn {
+  background-color: red;
 }

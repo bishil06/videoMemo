@@ -2,15 +2,15 @@ import MemoCard from "./MemoCard"
 import { VariableSizeList } from 'react-window'
 import { useRef } from 'react';
 
-export default function VideoMemoListContainer({ memoList, width, seekTo }: { memoList: Array<{ [k: string]: string | number }>, width: number, seekTo: (s: number)=>void}) {
+export default function VideoMemoListContainer({ memoList, width, seekTo, deleteMemo }: { memoList: Array<{ [k: string]: string | number }>, width: number, seekTo: (s: number)=>void, deleteMemo: (obj: { [k: string]: string | number })=>void }) {
   const containerRef = useRef<HTMLDivElement>(null) 
 
   const renderRow = ({ index, style }: { index: number, style: {} }) => {
-    return <MemoCard style ={style} memo={memoList[index]} key={index} seekTo={seekTo}></MemoCard>
+    return <MemoCard style ={style} memo={memoList[index]} key={index} seekTo={seekTo} deleteMemo={deleteMemo}></MemoCard>
   }
 
   function calcSize(index: number) {
-    return Object.keys(memoList[index]).length * 30
+    return (Object.keys(memoList[index]).length + 1) * 30
   }
 
   return (

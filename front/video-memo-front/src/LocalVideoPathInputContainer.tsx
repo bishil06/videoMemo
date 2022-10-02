@@ -4,7 +4,7 @@ export default function LocalVideoPathInputContainer({ setVideoPath }: {setVideo
   const videoPathInputRef = useRef<HTMLInputElement>(null)
 
   const inputHandler = () => {
-    if (videoPathInputRef.current?.files) {
+    if (videoPathInputRef.current?.files && videoPathInputRef.current?.files?.length > 0) {
       setVideoPath(URL.createObjectURL(videoPathInputRef.current.files[0]))
     }
   }

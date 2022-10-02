@@ -25,7 +25,11 @@ export default function MemoInput({ pushMemoList, memoList, getCurrentTime }: { 
   }
 
   const copyCurrentTime = () => {
-    navigator.clipboard.writeText(`${getCurrentTime()}`)
+    const ct = getCurrentTime()
+    if (!ct) {
+      return;
+    }
+    navigator.clipboard.writeText(`${ct}`)
   }
 
   return(

@@ -45,6 +45,7 @@
   },
   "devDependencies": {
     "@types/react-window": "^1.8.5",
+    "@types/wicg-file-system-access": "^2020.9.5",
     "faker": "^6.6.6"
   }
 }
