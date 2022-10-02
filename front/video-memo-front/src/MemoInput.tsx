@@ -80,8 +80,9 @@ export default function MemoInput({ pushMemoList, memoList, getCurrentTime }: { 
       <button onClick={() => {
         const v = editor?.get()
         if (!v) {
-          pushMemoList(v)
+          return;
         }
+        pushMemoList(v)
       }}>작성완료</button>
     </div>
   )
