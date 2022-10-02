@@ -69,7 +69,12 @@ h1 {
 }
 
 .actvieBtn {
-  background-color: black;
+  border-radius: 5px;
+  background-color: yellowgreen;
+}
+
+.disableBtn {
+  border-radius: 5px;
 }
 
 .delteMemoBtn {
