@@ -77,7 +77,12 @@ export default function MemoInput({ pushMemoList, memoList, getCurrentTime }: { 
       <button className={startValue?'actvieBtn':'disableBtn'} onClick={() => startToggle()}>start</button>
       <button className={endValue?'actvieBtn':'disableBtn'} onClick={() => endToggle()}>end</button>
       <JSONEditorContainer jsonValue={jsonValue} setEditor={setEditor}></JSONEditorContainer>
-      <button onClick={() => editor?.set(jsonValue)}>test</button>
+      <button onClick={() => {
+        const v = editor?.get()
+        if (!v) {
+          pushMemoList(v)
+        }
+      }}>작성완료</button>
     </div>
   )
 }
