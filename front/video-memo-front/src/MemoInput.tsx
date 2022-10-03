@@ -3,7 +3,8 @@ import { useState, useReducer, useEffect } from "react"
 import JSONEditor from 'jsoneditor'
 
 export default function MemoInput({ pushMemoList, memoList, getCurrentTime }: { memoList: Array<{ [k: string]: string | number }>, pushMemoList: (obj: { [k: string]: string | number })=>void, getCurrentTime: ()=>number|undefined }) {
-  const [jsonValue, setJsonValue] = useState({title:''})
+  const initJsonValue = {title:''}
+  const [jsonValue, setJsonValue] = useState(initJsonValue)
   const [startValue, startToggle] = useReducer((start)=>(!start), false)
   const [endValue, endToggle] = useReducer((endValue)=>(!endValue), false)
   const [editor, setEditor] = useState<JSONEditor | null>(null)
@@ -83,6 +84,16 @@ export default function MemoInput({ pushMemoList, memoList, getCurrentTime }: { 
           return;
         }
         pushMemoList(v)
+
+        if (startValue) {
+          startToggle()
+        }
+
+        if (endValue) {
+          endToggle()
+        }
+
+        setJsonValue(initJsonValue)
       }}>작성완료</button>
     </div>
   )
