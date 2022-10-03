@@ -10,7 +10,7 @@ export default function VideoMemoListContainer({ memoList, width, seekTo, delete
   }
 
   function calcSize(index: number) {
-    return (Object.keys(memoList[index]).length + 1) * 30
+    return (Object.keys(memoList[index]).length) * 30
   }
 
   return (

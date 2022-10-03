@@ -7,6 +7,9 @@ export default function MemoField({ keyName, value, seekTo }: { keyName: string,
   else if (keyName === 'title') {
     return (<div>{keyName}: <strong>{value}</strong></div>)
   }
+  else if (keyName === 'objectId') {
+    return null
+  }
   return (
     <div>{keyName}: {value}</div>
   )
