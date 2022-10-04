@@ -48,6 +48,7 @@ h1 {
   background-color: #ecd3a5;
   border-bottom: 1px solid black;
   overflow-x: scroll;
+  padding: 5px;
 }
 
 .seekBtn {
@@ -69,7 +70,12 @@ h1 {
 }
 
 .actvieBtn {
-  background-color: black;
+  border-radius: 5px;
+  background-color: yellowgreen;
+}
+
+.disableBtn {
+  border-radius: 5px;
 }
 
 .delteMemoBtn {
