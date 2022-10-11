@@ -19,7 +19,7 @@ upstream app {
 
 ## build
 ```
-docker build .
+docker build --platform linux/amd64 . 
 ```
 
 ## run
