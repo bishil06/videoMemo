@@ -1,0 +1,83 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+.App {
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #7500ec;
+}
+
+h1 {
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  color: whitesmoke;
+}
+
+.inputContainer {
+  padding-bottom: 10px;
+}
+
+.videoPathInputContainer {
+  padding-bottom: 10px;
+}
+
+.videoContainer {
+  border: 1px solid black;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+
+.videoPlayerContainer {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+}
+
+.videoMemoListContainer {
+  border-left: 1px solid black;
+  background-color: #d1b48c;
+}
+
+.memoCard {
+  background-color: #ecd3a5;
+  border-bottom: 1px solid black;
+  overflow-x: scroll;
+  padding: 5px;
+}
+
+.seekBtn {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.reactPlayer {
+  border-bottom: 1px solid black;
+}
+
+.memoInput {
+  padding: 10px;
+  overflow: scroll;
+  flex-grow: 1;
+  width: 100%;
+  height: 600px;
+  background-color: #e5edf9;
+}
+
+.actvieBtn {
+  border-radius: 5px;
+  background-color: yellowgreen;
+}
+
+.disableBtn {
+  border-radius: 5px;
+}
+
+.delteMemoBtn {
+  background-color: red;
+}
