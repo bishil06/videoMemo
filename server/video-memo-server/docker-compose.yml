@@ -23,3 +23,4 @@ services:
       - 8080:8080
     depends_on:
       - mongodb
+    image: registryipport/video-memo-server:0.1
