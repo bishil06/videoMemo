@@ -37,7 +37,7 @@ Front-end
 
 ## 트러블슈팅
 
-![깃허브 프로젝트 링크](https://github.com/users/bishil06/projects/3/views/2)
+[깃허브 프로젝트 링크](https://github.com/users/bishil06/projects/3/views/2)
 
 </div>
 </details>
