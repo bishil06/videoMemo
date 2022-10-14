@@ -37,20 +37,7 @@ Front-end
 
 ## 트러블슈팅
 
-### front-end
-
-#### 대용량 데이터 렌더링 이슈
-- 대용량의 데이터를 한꺼번에 렌더링할 경우 로딩이 너무 오래걸리는 이슈가 발생했습니다 ex) 5000개의 메모를 렌더링하는데 2000ms
-- windowing 기법이 적용된 react-window컴포넌트를 사용해서 화면에 표시되는 데이터만을 렌더링하는것으로 로딩속도를 줄이는데 성공했습니다
-<details>
-<summary> 소스코드 </summary>
-<div markdown="1">
-
-```tsx
-<VariableSizeList ref={variableSizeList} height={containerRef.current?.offsetHeight || 1000} width={width} itemCount={memoList.length} itemSize={calcSize}>
-  {renderRow}
-</VariableSizeList>
-```
+![깃허브 프로젝트 링크](https://github.com/users/bishil06/projects/3/views/2)
 
 </div>
 </details>
