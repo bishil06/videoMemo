@@ -39,8 +39,11 @@ Front-end
 
 [깃허브 프로젝트 링크](https://github.com/users/bishil06/projects/3/views/2)
 
-</div>
-</details>
+## 프로젝트 진행을 위해 학습한 도서
 
-### back-end
+* [러닝 리액트 2판](http://www.yes24.com/Product/Goods/102277805)
+
+* [MongoDB 완벽 가이드 3판](http://www.yes24.com/Product/Goods/97980005)
+
+* [타입스크립트 프로그래밍](http://www.yes24.com/Product/Goods/90265564)
 
