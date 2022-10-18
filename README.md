@@ -5,6 +5,9 @@
 ## Demo 
 [데모사이트](https://bishil06.me)
 
+## 문서
+[노션](https://www.notion.so/bishil/VideoMemo-33625ca7f3ff4def8c8e9f8d53460498)
+
 ## 기술 스택
 
 Back-end
